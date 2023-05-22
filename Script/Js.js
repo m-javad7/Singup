@@ -88,4 +88,31 @@ const checkEmail = () => {
         return true;
     }
 };
+//check inputs Form_signup
+document.getElementById("registrationForm").addEventListener("submit", function (event) {
+    event.preventDefault();
 
+    let isFormValid = checkForm();
+    let register = document.getElementById("register_msg")
+    if (isFormValid) {
+        register.textContent = "You have successfully registered!";
+        register.classList.add("register_text");
+    }
+});
+
+const checkForm = () => {
+    checkFirstName();
+    checkPassword();
+    checkEmail();
+
+    let nameError = document.getElementById("fnameEror");
+    let passwordError = document.getElementById("passwordError");
+    let emailError = document.getElementById("emailError");
+
+    return (
+        nameError.textContent === "" &&
+        passwordError.textContent === "" &&
+        emailError.textContent === ""
+
+    )
+}
