@@ -10,18 +10,16 @@
     display: flex;
     align-items: center;
 }
-/*.container_form{*/
-/*    display: flex;*/
-/*    justify-content: right;*/
-/*}*/
+
 .container_form{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .form{
-    width: 60%;
-    padding: 40px;
+    width: 400px;
+    padding: 30px 40px 30px;
     border-radius: 30px;
     background-color: white;
 }
@@ -37,11 +35,8 @@ a{
     color: var(--color-blue);
     text-decoration: none;
 }
-.form{
-    width: 80%;
-}
 
-.form_input_name input[type="text"], input[type="password"]{
+.form_input_name input[type="text"], input[type="password"], input[type="email"]{
     background-color: #D4EBF6;
     border: none;
     border-radius: 8px;
@@ -51,7 +46,7 @@ a{
     font-size: 1.3rem;
     width: 100%;
 }
- input[type="text"]:focus,[type="password"]:focus{
+input[type="text"]:focus,[type="password"]:focus, input[type="email"]:focus{
     background-color: var(--color-bl);
 }
 .form_btn{
@@ -63,22 +58,27 @@ a{
     margin: 15px 0;
     color: var(--color-White);
     font-size: 1.3rem;
+    cursor: pointer;
 }
-.enabled{
+.form_btn:hover{
     background-color: var(--color-light-blue);
     cursor: pointer;
 }
- .input_pass{
-    background: #f5f4f4;
-    padding-right: 35px;
-}
- .error_msg{
-    font-size: 1.2rem;
+
+.error_msg{
+    font-size: 1.1rem;
     color: #f74040;
-    display: none;
+}
+.register_text{
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #1d8f4e;
 }
 
 @media only screen and (min-width: 768px) {
+    .container_form{
+        width: 562px;
+    }
     .form_input_name{
         display: flex;
         justify-content: space-between;
@@ -86,9 +86,7 @@ a{
     .form_input_name input[type="text"] {
         width: 98%;
     }
-    .form{
-        width: 60%;
-    }
+
     .form_h2{
         font-size: 2rem;
     }
