@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+body{
+    background: radial-gradient(circle at 69% 60%, #448eb9, #02498c 81%);
+}
+:root {
+    --color-White: #ffffff;
+    --color-Light-Gray: #f4f3f5;
+    --color-Gray: #e0dcdc;
+    --color-bl: #E8F0FE;
+    --color-Dark-Gray: #9697A3;
+    --color-blue:#1C8CC9 ;
+    --color-light-blue: #0086C9;
+    --color-Dark-blue: #056493;
+}
