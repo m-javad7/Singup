@@ -63,4 +63,29 @@ const checkPassword = () => {
     if (isUpper && isLower && isNumber && password.length >= 8) {
         console.log("Password is valid");
     }
+}
+//check Email
+const checkEmail = () => {
+    const emailInput = document.getElementById("email");
+    const emailError = document.getElementById("emailError");
+    const email = emailInput.value;
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email.trim() === "") {
+        emailInput.classList.add("error_msg");
+        emailError.textContent = "Email address is required";
+        emailInput.style.border = "1px solid #f74040";
+        return false;
+    } else if (!emailRegex.test(email)) {
+        emailInput.classList.add("error_msg");
+        emailError.textContent = "Invalid email address";
+        emailInput.style.border = "1px solid #f74040";
+        return false;
+    } else {
+        emailInput.classList.remove("error_msg");
+        emailInput.style.border = "1px solid #80d084";
+        emailError.textContent = "";
+        return true;
+    }
 };
+
