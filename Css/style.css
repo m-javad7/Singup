@@ -1,0 +1,106 @@
+@import "Root.css";
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../Assets/Images/pic.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 65% 90%;
+    display: flex;
+    align-items: center;
+}
+/*.container_form{*/
+/*    display: flex;*/
+/*    justify-content: right;*/
+/*}*/
+.container_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    width: 60%;
+    padding: 40px;
+    border-radius: 30px;
+    background-color: white;
+}
+.form_h2{
+    font-size: 1.7rem;
+}
+.form_text{
+    font-size: 1.2rem;
+    color: var(--color-Dark-Gray);
+}
+a{
+    font-size: 1.2rem;
+    color: var(--color-blue);
+    text-decoration: none;
+}
+.form{
+    width: 80%;
+}
+
+.form_input_name input[type="text"], input[type="password"]{
+    background-color: #D4EBF6;
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 5px 0 5px;
+    outline-color: var(--color-Light-Gray);
+    font-size: 1.3rem;
+    width: 100%;
+}
+ input[type="text"]:focus,[type="password"]:focus{
+    background-color: var(--color-bl);
+}
+.form_btn{
+    padding: 20px;
+    width: 100%;
+    background-color: var(--color-Dark-blue);
+    border-radius: 24px;
+    border: none;
+    margin: 15px 0;
+    color: var(--color-White);
+    font-size: 1.3rem;
+}
+.enabled{
+    background-color: var(--color-light-blue);
+    cursor: pointer;
+}
+ .input_pass{
+    background: #f5f4f4;
+    padding-right: 35px;
+}
+ .error_msg{
+    font-size: 1.2rem;
+    color: #f74040;
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .form_input_name{
+        display: flex;
+        justify-content: space-between;
+    }
+    .form_input_name input[type="text"] {
+        width: 98%;
+    }
+    .form{
+        width: 60%;
+    }
+    .form_h2{
+        font-size: 2rem;
+    }
+
+    .form_text{
+        font-size: 1.3rem;
+    }
+    .form_input_name input[type="text"], input[type="password"] {
+        font-size: 1.4rem;
+    }
+    .form_btn{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
