@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="Css/style.css">
+    <title>Sign UP</title>
+</head>
+<body>
+<div class="container">
+    <div class="container_form">
+        <div class="form">
+            <p id="register_msg" class="register_text"></p>
+            <h2 class="form_h2">Start Coding</h2>
+            <span class="form_text">Already have account? <a href="#">Sign In</a></span>
+            <form id="registrationForm">
+                <div class="form_input_name">
+                    <div>
+                        <div>
+                            <label for="fname" class="label"></label>
+                            <input id="fname" type="text" placeholder="First name" class="input" onchange="return checkFirstName();" />
+                        </div>
+                        <div>
+                            <span id="fnameEror" class="error_msg"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="lname"></label>
+                        <input id="lname" type="text" placeholder="Last name" class="input" onchange="return checkFirstName()" />
+                    </div>
+                </div>
+                <div class="form_input_pass">
+                    <div>
+                        <label for="password"></label>
+                        <input id="password" type="password" onchange="return checkPassword()" placeholder="Password"  />
+                        <span id="passwordError" class="error_msg"></span>
+                    </div>
+                    <div>
+                        <label for="email"></label>
+                        <input id="email" type="email" placeholder="Email" onchange="checkEmail()" />
+                        <span id="emailError" class="error_msg"></span>
+                    </div>
+
+                    <button type="submit" id="login_btn"  class="form_btn" value="Register">Create my account </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="Script/Js.js"></script>
+</body>
+</html>
