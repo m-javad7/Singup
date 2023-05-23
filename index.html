@@ -19,7 +19,7 @@
                     <div>
                         <div>
                             <label for="fname" class="label"></label>
-                            <input id="fname" type="text" placeholder="First name" class="input" onchange="return checkFirstName();" />
+                            <input id="fname" type="text" placeholder="First name" required class="input" onchange=" checkFirstName();" />
                         </div>
                         <div>
                             <span id="fnameEror" class="error_msg"></span>
@@ -27,18 +27,18 @@
                     </div>
                     <div>
                         <label for="lname"></label>
-                        <input id="lname" type="text" placeholder="Last name" class="input" onchange="return checkFirstName()" />
+                        <input id="lname" type="text" placeholder="Last name" class="input" onchange=" checkFirstName()" />
                     </div>
                 </div>
                 <div class="form_input_pass">
                     <div>
                         <label for="password"></label>
-                        <input id="password" type="password" onchange="return checkPassword()" placeholder="Password"  />
+                        <input id="password" type="password" onchange=" checkPassword()" placeholder="Password" required  />
                         <span id="passwordError" class="error_msg"></span>
                     </div>
                     <div>
                         <label for="email"></label>
-                        <input id="email" type="email" placeholder="Email" onchange="checkEmail()" />
+                        <input id="email" type="email" placeholder="Email" onchange="checkEmail()"  required />
                         <span id="emailError" class="error_msg"></span>
                     </div>
 
