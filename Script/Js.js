@@ -2,18 +2,15 @@
 const checkFirstName = () => {
     let input_text = document.querySelector("#fname");
     let fnameError = document.querySelector(".error_msg");
-    if (input_text.value.length <= 3) {
+    const name = input_text.value.trim();     //Removes extra space from the beginning and end of the name.
+    if (name.length < 3 || name.length > 15 || !/^[a-zA-Z\s]+$/.test(name) )       // Only English letters
+    {
         input_text.style.border = "1px solid #f74040";
         input_text.classList.add("error_msg");
-        fnameError.textContent = "The name must be at least 3 letters long. Please try again";
+        fnameError.textContent = "The name must be at least 3 letters, 15 letters and contain only alphabets.";
         return false;
     }
-    if (input_text.value.length > 15) {
-        input_text.style.border = "1px solid #f74040";
-        input_text.classList.add("error_msg");
-        fnameError.textContent = "The name must not exceed 15 letters. Please try again.";
-        return false;
-    } else{
+    else {
         input_text.classList.remove("error_msg");
         input_text.style.border = "1px solid #80d084";
         fnameError.textContent = "";
